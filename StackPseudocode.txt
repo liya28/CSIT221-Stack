@@ -1,0 +1,28 @@
+Pseudocode
+
+Balanced Parentheses
+
+1. Initialize a stack
+2. Traverse the string
+3. If it is an opening symbol, push it in the stack
+4. Else, if it is a closing symbol, compare the top of the stack and the current character if they are compatible with each other. Return false if not. Else, pop the character.
+5. Return s.empty(), if it's empty, it means it is balanced.
+
+Infix to Postfix Expression Conversion
+1. Initialize a stack and a result string
+2. Traverse the string
+3. If it is a space, continue
+4. If it is an alnum, add it in the result string
+5. Else if it is an opening parenthesis, push it in the stack
+6. Else if it is a closing parenthesis, while the stack is not empty and the top is not yet (, add it on the result string. Then pop the preceding opening.
+7. Else, (this means it is an operator), create a while loop wherein while the stack is not empty and the precedence of the top is greater or equal than the precedence of the current operator, add the top in the result string
+8. After, push the character being compared with
+9. After the for loop, create another while loop to add the remaining operators in the result string
+10. Return the string
+
+Next Greater Element
+1. Initialize a stack
+2. Initialize a result vector with -1 as its value
+3. Traverse the vector from left to right
+4. While the stack is not empty and the current element is greater than the element in the top, place the index at the index of the top in the result vector and pop
+5. Push the current element
